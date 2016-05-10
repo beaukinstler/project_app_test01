@@ -7,7 +7,12 @@
 
 <p>
   <strong>Owner:</strong>
-  <%= @project.owner_id %>
+  <%= User.find_by_id(@project.owner_id).name %>
+</p>
+
+<p>
+  <strong>Sponsor:</strong>
+  <%= User.find_by_id(@project.sponsor_id).name %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
