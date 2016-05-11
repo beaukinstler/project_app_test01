@@ -4,6 +4,11 @@
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
+<div>
+  <h2>Owned Projects</h2>
+    <%= render 'owned_projects' %>
+</div>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -1,0 +1,4 @@
+<% for project in @user.owned_projects %>
+  <h3><%= link_to project.name, :project %></h3>
+  <p>Sponsor: <%= User.find_by_id(project.sponsor_id).name %></p>
+<% end %>
