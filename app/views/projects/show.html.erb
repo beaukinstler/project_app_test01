@@ -12,7 +12,7 @@
 
 <p>
   <strong>Sponsor:</strong>
-  <%= link_to User.find_by_id(@project.sponsor_id).name, User.find_by_id(@project.sponsor_id) %>
+  <%= link_to @project.user.name, @project.user %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
